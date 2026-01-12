@@ -1,5 +1,17 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
+const listaCursos = document.querySelectorAll('.cursos');
+
+function animarSaida(event) {
+    const divEspecifica = event.currentTarget; 
+    divEspecifica.style.transition = '.5s';
+    divEspecifica.style.transform = 'scale(1)';
+}
+//O "Loop": Adiciona o evento a cada div automaticamente
+listaCursos.forEach(div => {
+    div.addEventListener('mouseleave', animarSaida);
+});
+
 
 // Persistência do tema
 const temasalvo = localStorage.getItem('tema');
