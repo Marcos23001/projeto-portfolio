@@ -1,6 +1,7 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
 const listaCursos = document.querySelectorAll('.cursos');
+const listaprojetos = document.querySelectorAll('.projeto');
 
 function animarSaida(event) {
     const divEspecifica = event.currentTarget; 
@@ -10,6 +11,10 @@ function animarSaida(event) {
 //O "Loop": Adiciona o evento a cada div automaticamente
 listaCursos.forEach(div => {
     div.addEventListener('mouseleave', animarSaida);
+});
+
+listaprojetos.forEach(div=> {
+  div.addEventListener('mouseleave', animarSaida);
 });
 
 
